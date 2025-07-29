@@ -3,9 +3,7 @@ import LatestInvoices from "@/lib/components/dashboard/LatestInvoices";
 import RecentRevenue from "@/lib/components/dashboard/RecentRevenue";
 import React from "react";
 
-type Props = {};
-
-function dashboard({}: Props) {
+function dashboard() {
   return (
     <div className="grid lg:grid-rows-2 lg:grid-cols-2 md:grid-rows-1 md:grid-cols-1">
       <div className="lg:col-span-2">

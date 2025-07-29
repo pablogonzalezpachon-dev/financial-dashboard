@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-function RecentRevenue({}: Props) {
+function RecentRevenue() {
   return <div>RecentRevenue</div>;
 }
 

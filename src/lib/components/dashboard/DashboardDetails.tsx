@@ -5,9 +5,7 @@ import { CiClock2 } from "react-icons/ci";
 import { BsArchive } from "react-icons/bs";
 import { BsPeople } from "react-icons/bs";
 
-type Props = {};
-
-function DashboardDetails({}: Props) {
+function DashboardDetails() {
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-3">Dashboard</h1>
