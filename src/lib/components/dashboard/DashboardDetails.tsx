@@ -10,7 +10,7 @@ type Props = {};
 function DashboardDetails({}: Props) {
   return (
     <div>
-      <h1 className="text-2xl font-semibold">Dashboard</h1>
+      <h1 className="text-2xl font-semibold mb-3">Dashboard</h1>
       <div className="flex flex-row max-lg:flex-wrap grow gap-x-5 gap-y-5">
         <DashboardDetailCard
           icon={<PiMoneyLight className="mt-1" />}
