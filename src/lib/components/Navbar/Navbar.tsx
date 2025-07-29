@@ -6,9 +6,7 @@ import { LiaFileInvoiceSolid } from "react-icons/lia";
 import { BsPeople } from "react-icons/bs";
 import { LiaPowerOffSolid } from "react-icons/lia";
 
-type Props = {};
-
-function Navbar({}: Props) {
+function Navbar() {
   return (
     <div className="flex flex-col md:w-[250px] h-40 md:h-screen gap-y-3 bg-white p-3 ">
       <div className="flex flex-row h-20 md:w-55 md:h-[160px] rounded-md bg-red-400 items-end pl-5">
