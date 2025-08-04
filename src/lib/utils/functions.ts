@@ -15,6 +15,13 @@ export function getVisiblePages(
 ): (number | "...")[] {
   const pages: (number | "...")[] = [];
 
+  if (totalPages <= 4) {
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i);
+    }
+    return pages;
+  }
+
   if (currentPage > totalPages) {
     return [];
   } else if (currentPage < 0) {
