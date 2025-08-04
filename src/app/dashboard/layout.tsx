@@ -9,7 +9,7 @@ type Props = {
 function dashboardLayout({ children }: Props) {
   return (
     <div className="grid md:grid-cols-[250px_1fr]">
-      <div>
+      <div className="">
         <Navbar />
       </div>
       <div className="md:p-10 p-5">{children}</div>
