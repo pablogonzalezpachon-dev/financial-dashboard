@@ -8,7 +8,7 @@ type Props = {
   }>;
 };
 
-async function customersPage({ searchParams }: Props) {
+async function CustomersPage({ searchParams }: Props) {
   const searchParamsFetched = await searchParams;
   const searchQuery = searchParamsFetched?.query || "";
   return (
@@ -20,4 +20,4 @@ async function customersPage({ searchParams }: Props) {
   );
 }
 
-export default customersPage;
+export default CustomersPage;

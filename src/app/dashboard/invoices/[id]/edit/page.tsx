@@ -19,7 +19,7 @@ import z from "zod";
 import { editInvoice } from "@/lib/utils/supabase/serverActions";
 import { getZodErrors } from "@/lib/utils/functions";
 
-function editPage() {
+function EditInvoicePage() {
   const router = useRouter();
   const params = useParams();
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
@@ -184,4 +184,4 @@ function editPage() {
   );
 }
 
-export default editPage;
+export default EditInvoicePage;

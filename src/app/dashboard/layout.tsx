@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-function dashboardLayout({ children }: Props) {
+function DashboardLayout({ children }: Props) {
   return (
     <div className="grid md:grid-cols-[250px_1fr]">
       <div className="">
@@ -17,4 +17,4 @@ function dashboardLayout({ children }: Props) {
   );
 }
 
-export default dashboardLayout;
+export default DashboardLayout;

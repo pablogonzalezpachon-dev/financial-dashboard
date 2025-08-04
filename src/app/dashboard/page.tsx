@@ -3,7 +3,7 @@ import LatestInvoices from "@/lib/components/dashboard/LatestInvoices";
 import RecentRevenue from "@/lib/components/dashboard/RecentRevenue";
 import React from "react";
 
-function dashboard() {
+function Dashboard() {
   return (
     <div className="grid lg:grid-rows-[auto_1fr] lg:grid-cols-2 md:grid-rows-1 md:grid-cols-1 gap-x-5">
       <div className="lg:col-span-2">
@@ -19,4 +19,4 @@ function dashboard() {
   );
 }
 
-export default dashboard;
+export default Dashboard;

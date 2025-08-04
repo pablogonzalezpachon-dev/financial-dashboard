@@ -2,8 +2,8 @@ import React from "react";
 
 type Props = {};
 
-function loading({}: Props) {
-  return <div>loading...</div>;
+function Loading({}: Props) {
+  return <div>Loading...</div>;
 }
 
-export default loading;
+export default Loading;

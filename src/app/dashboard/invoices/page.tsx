@@ -15,7 +15,7 @@ type Props = {
   };
 };
 
-async function invoicesPage({ searchParams }: Props) {
+async function InvoicesPage({ searchParams }: Props) {
   const searchParamsFetched = await searchParams;
   const currentPage = Number(searchParamsFetched?.page) || 1;
   const searchQuery = searchParamsFetched?.query || "";
@@ -36,4 +36,4 @@ async function invoicesPage({ searchParams }: Props) {
   );
 }
 
-export default invoicesPage;
+export default InvoicesPage;

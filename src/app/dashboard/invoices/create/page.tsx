@@ -12,7 +12,7 @@ import { createInvoice } from "@/lib/utils/supabase/serverActions";
 import LoadingSpinner from "@/lib/components/LoadingSpinner";
 import { getZodErrors } from "@/lib/utils/functions";
 
-function page() {
+function createInvoicePage() {
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const router = useRouter();
   const [customers, setCustomers] = useState<Customer[]>();
@@ -158,7 +158,4 @@ function page() {
   );
 }
 
-export default page;
-function addInvoice(): { error: any } | PromiseLike<{ error: any }> {
-  throw new Error("Function not implemented.");
-}
+export default createInvoicePage;
