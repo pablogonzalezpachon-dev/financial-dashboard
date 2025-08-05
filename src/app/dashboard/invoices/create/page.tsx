@@ -12,7 +12,7 @@ import { createInvoice } from "@/lib/utils/supabase/serverActions";
 import LoadingSpinner from "@/lib/components/LoadingSpinner";
 import { getZodErrors } from "@/lib/utils/functions";
 
-function createInvoicePage() {
+function CreateInvoicePage() {
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const router = useRouter();
   const [customers, setCustomers] = useState<Customer[]>();
@@ -158,4 +158,4 @@ function createInvoicePage() {
   );
 }
 
-export default createInvoicePage;
+export default CreateInvoicePage;

@@ -5,9 +5,7 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
 
-type Props = {};
-
-function CustomersSearchBar({}: Props) {
+function CustomersSearchBar() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
