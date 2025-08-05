@@ -2,9 +2,7 @@ import React from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { LuPencil } from "react-icons/lu";
 
-type Props = {};
-
-function InvoicesTableRowSkeleton({}: Props) {
+function InvoicesTableRowSkeleton() {
   return (
     <>
       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">

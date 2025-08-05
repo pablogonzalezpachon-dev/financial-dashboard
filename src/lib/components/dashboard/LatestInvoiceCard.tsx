@@ -2,7 +2,7 @@ import { queryLatestInvoices } from "@/lib/utils/supabase/serverQueries";
 import Image from "next/image";
 import React from "react";
 
-type Props = { img: string; name: string; email: string; amount: String };
+type Props = { img: string; name: string; email: string; amount: string };
 
 function LatestInvoiceCard({ img, name, email, amount }: Props) {
   return (
