@@ -2,7 +2,6 @@ import { inter } from "@/lib/styles/fonts";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import "@/lib/styles/globals.css";
-import { Provider } from "@/components/ui/provider";
 
 export const metadata: Metadata = {
   title: "Acme Financial Dashboard",
