@@ -9,10 +9,10 @@ import {
 import React, { Suspense } from "react";
 
 type Props = {
-  searchParams?: {
+  searchParams?: Promise<{
     page?: string;
     query?: string;
-  };
+  }>;
 };
 
 async function InvoicesPage({ searchParams }: Props) {
