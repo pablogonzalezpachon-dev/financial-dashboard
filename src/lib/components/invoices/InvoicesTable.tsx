@@ -6,9 +6,7 @@ import { queryInvoices } from "@/lib/utils/supabase/clientQueries";
 import { useSearchParams } from "next/navigation";
 import InvoicesTableRowSkeleton from "./InvoicesTableRowSkeleton";
 
-type Props = {};
-
-function InvoicesTable({}: Props) {
+function InvoicesTable() {
   const queryParams = useSearchParams();
   const page = parseInt(queryParams.get("page") ?? "1");
   const query = queryParams.get("query") ?? "";
