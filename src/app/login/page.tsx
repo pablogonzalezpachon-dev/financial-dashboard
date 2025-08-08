@@ -95,7 +95,7 @@ export default function LoginPage() {
 
           <LoadingSpinner message={formError?.message} />
           <Link href="/signup" className="text-center text-red-600">
-            Don't have an account? Sign up!
+            Don&apos;t have an account? Sign up!
           </Link>
         </form>
       </div>
