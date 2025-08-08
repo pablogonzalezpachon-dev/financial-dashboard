@@ -1,5 +1,4 @@
 import z from "zod";
-
 export function getZodErrors(error: z.ZodError) {
   const errorMap: Record<string, string> = {};
   error.issues.forEach((issue) => {

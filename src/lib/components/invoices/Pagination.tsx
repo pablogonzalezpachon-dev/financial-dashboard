@@ -18,6 +18,7 @@ function Pagination({ pages }: Props) {
     params.set("page", pageNumber.toString());
     return `${pathname}?${params.toString()}`;
   };
+
   const goToPage = (page: number) => {
     window.history.pushState(null, "", createPageURL(page));
   };

@@ -8,8 +8,8 @@ import {
 } from "@/lib/utils/supabase/clientQueries";
 import { formSchema } from "@/lib/utils/validationSchema";
 import Form from "next/form";
-import { useParams, useRouter } from "next/navigation";
-import React from "react";
+import { redirect, useParams, useRouter } from "next/navigation";
+import React, { use } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { CiMoneyBill } from "react-icons/ci";
@@ -18,8 +18,11 @@ import z from "zod";
 
 import { editInvoice } from "@/lib/utils/supabase/serverActions";
 import { getZodErrors } from "@/lib/utils/functions";
+import { createClient, validateClientUser } from "@/lib/utils/supabase/client";
 
 function EditInvoicePage() {
+  const supabase = createClient();
+
   const router = useRouter();
   const params = useParams();
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
@@ -49,6 +52,11 @@ function EditInvoicePage() {
   }
 
   useEffect(() => {
+    async function validate() {
+      await validateClientUser();
+    }
+    validate();
+
     async function fetchData() {
       setLoading(true);
       const customersPromise = queryCustomers("");

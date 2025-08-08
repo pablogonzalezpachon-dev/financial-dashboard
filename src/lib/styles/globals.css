@@ -1,2 +1,60 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+/* animation / duration / steps / mode / delay */
+@theme {
+  --animate-typewriter-title: typewriter 2s steps(16) forwards;
+  --animate-caret-title: typewriter 2s steps(16) forwards,
+    blink 1s steps(16) infinite 2s;
+
+  --animate-typewriter-text: typewriter 1s steps(53) forwards 2s;
+  --animate-caret-text: typewriter 1s steps(53) forwards 2s,
+    disappear 1s forwards 3s;
+
+  --animate-atom: spinGrow 1s forwards 2.5s;
+
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    0.1% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    50.1% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes disappear {
+    0% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }
+
+  @keyframes spinGrow {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(-3deg) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: rotate(360deg) scale(0);
+    }
+  }
+}

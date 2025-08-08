@@ -7,6 +7,8 @@ import {
   queryInvoices,
 } from "@/lib/utils/supabase/serverQueries";
 import React, { Suspense } from "react";
+import { createClient, validateServerUser } from "@/lib/utils/supabase/server";
+import { redirect } from "next/navigation";
 
 type Props = {
   searchParams?: Promise<{
@@ -16,6 +18,8 @@ type Props = {
 };
 
 async function InvoicesPage({ searchParams }: Props) {
+  await validateServerUser();
+
   const searchParamsFetched = await searchParams;
   const currentPage = Number(searchParamsFetched?.page) || 1;
   const searchQuery = searchParamsFetched?.query || "";

@@ -6,6 +6,7 @@ import { LiaFileInvoiceSolid } from "react-icons/lia";
 import { BsPeople } from "react-icons/bs";
 import { LiaPowerOffSolid } from "react-icons/lia";
 import Link from "next/link";
+import { signOut } from "@/lib/utils/supabase/serverActions";
 
 function Navbar() {
   return (
@@ -40,10 +41,13 @@ function Navbar() {
           </div>
         </Link>
         <div className="hidden md:grow md:block bg-gray-100 rounded-md md:w-55"></div>
-        <div className="flex flex-row h-12 w-15 justify-center items-center bg-gray-100 gap-x-1.5 md:pl-2 rounded-md md:grow-0 md:w-55 md:justify-start">
+        <button
+          onClick={signOut}
+          className="flex flex-row h-12 w-15 justify-center items-center bg-gray-100 gap-x-1.5 md:pl-2 rounded-md md:grow-0 md:w-55 md:justify-start"
+        >
           <LiaPowerOffSolid size="20" />
           <p className="hidden md:block">Sign out</p>
-        </div>
+        </button>
       </div>
     </div>
   );

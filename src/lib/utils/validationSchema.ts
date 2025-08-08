@@ -7,3 +7,8 @@ export const formSchema = z.object({
 
   invoice_status: z.string().min(1, "Required Field"),
 });
+
+export const userSchema = z.object({
+  email: z.email("Invalid Email").min(1, "Required Field"),
+  password: z.string().min(1, "Required Field"),
+});

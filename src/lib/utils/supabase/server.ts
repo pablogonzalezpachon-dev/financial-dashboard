@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 export async function createClient() {
   const cookieStore = await cookies();
   return createServerClient(
@@ -24,4 +25,12 @@ export async function createClient() {
       },
     }
   );
+}
+
+export async function validateServerUser() {
+  const supabase = await createClient();
+  const { data, error } = await supabase.auth.getUser();
+  if (error || !data?.user) {
+    redirect("/");
+  }
 }

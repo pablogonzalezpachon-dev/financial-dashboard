@@ -4,20 +4,28 @@ import { Customer, queryCustomers } from "@/lib/utils/supabase/clientQueries";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { CiMoneyBill } from "react-icons/ci";
 import React, { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { redirect, usePathname, useRouter } from "next/navigation";
 import Form from "next/form";
 import { formSchema } from "@/lib/utils/validationSchema";
 import z from "zod";
 import { createInvoice } from "@/lib/utils/supabase/serverActions";
 import LoadingSpinner from "@/lib/components/LoadingSpinner";
 import { getZodErrors } from "@/lib/utils/functions";
+import { createClient, validateClientUser } from "@/lib/utils/supabase/client";
 
 function CreateInvoicePage() {
+  const supabase = createClient();
+
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const router = useRouter();
   const [customers, setCustomers] = useState<Customer[]>();
   const [loading, setLoading] = useState<boolean>(false);
   useEffect(() => {
+    async function validate() {
+      await validateClientUser();
+    }
+    validate();
+
     async function fetchData() {
       setLoading(true);
       const { data: customers, error } = await queryCustomers("");

@@ -1,5 +1,7 @@
 import CustomersSearchBar from "@/lib/components/customers/CustomersSearchBar";
 import CustomersTable from "@/lib/components/customers/CustomersTable";
+import { createClient, validateServerUser } from "@/lib/utils/supabase/server";
+import { redirect } from "next/navigation";
 import React, { Suspense } from "react";
 
 type Props = {
@@ -9,6 +11,8 @@ type Props = {
 };
 
 async function CustomersPage({ searchParams }: Props) {
+  await validateServerUser();
+
   const searchParamsFetched = await searchParams;
   const searchQuery = searchParamsFetched?.query || "";
   return (

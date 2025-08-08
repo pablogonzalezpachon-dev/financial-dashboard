@@ -5,7 +5,7 @@ type Props = {
   message?: string;
 };
 
-export default function LoadingSpinner({ message }: Props) {
+export default function LoginLoadingSpinner({ message }: Props) {
   const status = useFormStatus();
   console.log(status.pending);
   return (
@@ -29,10 +29,8 @@ export default function LoadingSpinner({ message }: Props) {
             />
           </svg>
         </div>
-      ) : message ? (
-        <p className={`text-red-700 text-center`}>{message}</p>
       ) : (
-        ""
+        <p className={`text-red-700 text-center`}>{message}</p>
       )}
     </span>
   );
