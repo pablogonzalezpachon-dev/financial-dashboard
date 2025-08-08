@@ -11,11 +11,9 @@ import z from "zod";
 import { createInvoice } from "@/lib/utils/supabase/serverActions";
 import LoadingSpinner from "@/lib/components/LoadingSpinner";
 import { getZodErrors } from "@/lib/utils/functions";
-import { createClient, validateClientUser } from "@/lib/utils/supabase/client";
+import { validateClientUser } from "@/lib/utils/supabase/client";
 
 function CreateInvoicePage() {
-  const supabase = createClient();
-
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const router = useRouter();
   const [customers, setCustomers] = useState<Customer[]>();
