@@ -8,11 +8,6 @@ function LatestInvoiceCard({ img, name, email, amount }: Props) {
   return (
     <>
       <div className="flex min-w-0 gap-x-4">
-        <img
-          src={img}
-          alt=""
-          className="size-12 flex-none rounded-full bg-gray-50"
-        />
         <div className="min-w-0 flex-auto">
           <p className="text-md font-semibold text-gray-900">{name}</p>
           <p className="mt-1 truncate text-sm text-gray-500">{email}</p>
