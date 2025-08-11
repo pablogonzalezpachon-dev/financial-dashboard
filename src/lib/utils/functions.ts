@@ -1,4 +1,6 @@
 import z from "zod";
+import * as React from "react";
+
 export function getZodErrors(error: z.ZodError) {
   const errorMap: Record<string, string> = {};
   error.issues.forEach((issue) => {
@@ -46,3 +48,15 @@ export function getVisiblePages(
   if (totalPages > 1) pages.push(totalPages);
   return pages;
 }
+
+export const useOnWindowResize = (handler: () => void) => {
+  React.useEffect(() => {
+    const handleResize = () => {
+      handler();
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [handler]);
+};

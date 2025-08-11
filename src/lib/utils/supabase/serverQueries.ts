@@ -109,3 +109,17 @@ export async function queryCustomers(search: string): Promise<{
   const { data, error } = await supabase.rpc("querycustomers", { search });
   return { data, error };
 }
+
+export type Revenue = {
+  month: string;
+  revenue: number;
+};
+
+export async function queryRevenue(): Promise<{
+  data: Revenue[] | null;
+  error: PostgrestError | null;
+}> {
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("query_revenue");
+  return { data, error };
+}

@@ -19,14 +19,14 @@ export default function Home() {
       <div className=" h-140 px-6 pb-5 flex min-[1200px]:w-180">
         <div className="bg-gray-100 h-full w-full rounded-md flex flex-col justify-center items-center">
           <h1
-            className={` ${inter.className} mb-5 font-medium text-6xl relative w-[max-content] font-mono 
+            className={` ${inter.className} mb-5 font-medium text-6xl relative w-max font-mono 
 before:absolute before:inset-0 before:animate-typewriter-title before:bg-gray-100 
 after:absolute after:inset-0 after:w-[0.125em] after:animate-caret-title after:bg-black`}
           >
             Welcome to Acme!
           </h1>
           <h2
-            className={` ${inter.className} text-2xl relative w-[max-content] font-mono 
+            className={` ${inter.className} text-2xl relative w-max font-mono 
 before:absolute before:inset-0 before:animate-typewriter-text before:bg-gray-100 
 after:absolute after:inset-0 after:w-[0.125em] after:animate-caret-text after:bg-black`}
           >
