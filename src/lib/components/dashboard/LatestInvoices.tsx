@@ -4,7 +4,6 @@ import { queryLatestInvoices } from "@/lib/utils/supabase/serverQueries";
 
 async function LatestInvoices() {
   const { data, error } = await queryLatestInvoices();
-  console.log(data);
   console.log(error);
 
   return (

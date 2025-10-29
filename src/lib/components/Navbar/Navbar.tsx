@@ -10,7 +10,7 @@ import { signOut } from "@/lib/utils/supabase/serverActions";
 
 function Navbar() {
   return (
-    <div className=" md:fixed flex flex-col md:w-[250px] h-40 md:h-screen gap-y-3 bg-white p-3 ">
+    <div className=" md:fixed flex flex-col md:w-[250px] h-40 md:h-screen gap-y-3 bg-white p-3 z-10 ">
       <div className="flex flex-row h-20 md:w-55 md:h-[160px] rounded-md bg-red-400 items-end pl-5">
         <DiAtom size="50" color="white" className="mb-3 md:mb-4" />
         <p

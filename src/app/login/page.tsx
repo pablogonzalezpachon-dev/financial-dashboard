@@ -87,7 +87,7 @@ export default function LoginPage() {
             )}
           </div>
           <button type="submit" className=" bg-red-400 h-10 rounded-lg mt-4">
-            <div className="flex flex-row justify-between gap-x-80 text-white pr-3">
+            <div className="flex flex-row justify-between gap-x-80 max-md:gap-x-50 text-white pr-3">
               <p className="w-20">Log in</p>
               <FaArrowRight size="20" className="my-auto" />
             </div>

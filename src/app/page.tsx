@@ -21,16 +21,16 @@ export default function Home() {
           <h1
             className={` ${inter.className} mb-5 font-medium text-6xl relative w-max font-mono 
 before:absolute before:inset-0 before:animate-typewriter-title before:bg-gray-100 
-after:absolute after:inset-0 after:w-[0.125em] after:animate-caret-title after:bg-black`}
+after:absolute after:inset-0 after:w-[0.125em] after:animate-caret-title after:bg-black max-md:text-4xl`}
           >
             Welcome to Acme!
           </h1>
           <h2
             className={` ${inter.className} text-2xl relative w-max font-mono 
 before:absolute before:inset-0 before:animate-typewriter-text before:bg-gray-100 
-after:absolute after:inset-0 after:w-[0.125em] after:animate-caret-text after:bg-black`}
+after:absolute after:inset-0 after:w-[0.125em] after:animate-caret-text after:bg-black text-center`}
           >
-            A financial dashboard build upon Next.js learn course
+            A financial dashboard build upon <p>Next.js learn course</p>
           </h2>
           <Link
             href="/login"
@@ -43,7 +43,7 @@ after:absolute after:inset-0 after:w-[0.125em] after:animate-caret-text after:bg
           </Link>
         </div>
       </div>
-      <div className="">
+      <div className="max-md:mt-[-30px]">
         <DiAtom
           size="410"
           color="black"

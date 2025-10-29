@@ -22,10 +22,13 @@ function CustomersTableRow({
           scope="row"
           className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
         >
-          {name}
+          {name} <br />{" "}
+          <p className="md:hidden text-xs text-gray-500">
+            Invoices: {totalInvoices}
+          </p>
         </th>
         <td className="px-6 py-4 max-md:hidden">{email}</td>
-        <td className="px-6 py-4">
+        <td className="px-6 py-4 max-md:hidden">
           <strong
             className="md:hidden text-black font-normal mr-1
 "
@@ -34,7 +37,7 @@ function CustomersTableRow({
           </strong>
           {totalInvoices}
         </td>
-        <td className="px-6 py-4">
+        <td className="px-6 py-4 max-md:px-1">
           <strong
             className="md:hidden text-black font-normal mr-1
 "

@@ -33,7 +33,6 @@ function EditInvoicePage() {
   async function editPost(formData: FormData) {
     const data = Object.fromEntries(formData.entries());
     const today = new Date().toISOString().split("T")[0];
-    console.log(data);
     try {
       formSchema.parse(data);
       setFormErrors({});

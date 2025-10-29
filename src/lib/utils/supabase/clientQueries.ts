@@ -64,7 +64,6 @@ export async function querySingleInvoice(invoice_id: number): Promise<{
   const { data, error } = await supabase.rpc("query_single_invoice", {
     invoice_id,
   });
-  console.log(data);
   console.log(error);
 
   return { data, error };

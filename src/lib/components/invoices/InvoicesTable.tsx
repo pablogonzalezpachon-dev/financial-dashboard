@@ -19,7 +19,6 @@ function InvoicesTable() {
     async function fetchData() {
       setLoading(true);
       const { data, error } = await queryInvoices(page, query);
-      console.log(data);
       setPageData(data);
       setLoading(false);
     }
@@ -27,7 +26,7 @@ function InvoicesTable() {
   }, [page, query, deleteState]);
 
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-5 p-2 bg-gray-50 ">
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-5 p-2 bg-gray-50">
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead className="max-md:hidden text-xs text-gray-700 uppercase bg-gray-50">
           <tr>

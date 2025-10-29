@@ -49,13 +49,16 @@ function InvoicesTableRow({ name, email, amount, status, date, id }: Props) {
         <tr className="bg-white border-b border-gray-200">
           <th
             scope="row"
-            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
           >
-            {name}
+            {name} <br />{" "}
+            <p className="md:hidden text-xs text-gray-500">
+              {formatDate(date)}
+            </p>
           </th>
           <td className="px-6 py-4 max-md:hidden">{email}</td>
-          <td className="px-6 py-4">{`$${amount}`}</td>
-          <td className="px-6 py-4 whitespace-nowrap overflow-hidden text-ellipsis">
+          <td className="px-6 py-4 max-md:px-2">{`$${amount}`}</td>
+          <td className="px-6 py-4 whitespace-nowrap overflow-hidden text-ellipsis max-md:hidden">
             {formatDate(date)}
           </td>
           <td className="px-6 py-4">{status}</td>

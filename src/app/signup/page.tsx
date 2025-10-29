@@ -35,7 +35,6 @@ function SignUp() {
       }
     }
   }
-  console.log(status.pending);
 
   return (
     <div className="flex justify-center items-center h-screen">
@@ -53,7 +52,8 @@ function SignUp() {
           className="flex flex-col bg-gray-100 rounded-lg gap-y-5 px-7 py-7"
         >
           <p className="font-semibold text-center text-2xl">
-            Enter an email and create a password to continue
+            Enter an email and create <br />
+            a password to continue <br />
           </p>
           <div className="flex flex-col gap-y-3">
             <label htmlFor="email" className="text-sm">
@@ -86,7 +86,7 @@ function SignUp() {
             )}
           </div>
           <button type="submit" className=" bg-red-400 h-10 rounded-lg mt-4">
-            <div className="flex flex-row justify-between gap-x-80 text-white pr-3">
+            <div className="flex flex-row justify-between gap-x-80 max-md:gap-x-50 text-white pr-3">
               <p className="w-20">Sign up</p>
               <FaArrowRight size="20" className="my-auto" />
             </div>

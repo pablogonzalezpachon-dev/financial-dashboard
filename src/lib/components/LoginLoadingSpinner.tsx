@@ -7,7 +7,6 @@ type Props = {
 
 export default function LoginLoadingSpinner({ message }: Props) {
   const status = useFormStatus();
-  console.log(status.pending);
   return (
     <span className="m-auto">
       {status.pending ? (

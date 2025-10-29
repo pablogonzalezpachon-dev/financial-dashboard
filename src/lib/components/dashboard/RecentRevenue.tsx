@@ -12,8 +12,6 @@ async function RecentRevenue() {
       month: item.month,
       revenue: item.revenue ?? 0,
     })) ?? [];
-
-  console.log(revenue);
   // Max value for scaling
 
   return (
