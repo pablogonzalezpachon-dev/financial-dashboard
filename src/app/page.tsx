@@ -30,7 +30,7 @@ after:absolute after:inset-0 after:w-[0.125em] after:animate-caret-title after:b
 before:absolute before:inset-0 before:animate-typewriter-text before:bg-gray-100 
 after:absolute after:inset-0 after:w-[0.125em] after:animate-caret-text after:bg-black text-center`}
           >
-            A financial dashboard build upon <p>Next.js learn course</p>
+            A financial dashboard build <p> upon Next.js learn course</p>
           </h2>
           <Link
             href="/login"

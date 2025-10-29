@@ -38,19 +38,16 @@ function CustomersTableRow({
           {totalInvoices}
         </td>
         <td className="px-6 py-4 max-md:px-1">
-          <strong
-            className="md:hidden text-black font-normal mr-1
-"
-          >
+          <strong className="md:hidden text-black font-normal mr-1 text-green-600">
             Paid:
           </strong>
-          {totalPaid}
+          {totalPaid} <br />
+          <strong className="md:hidden text-black font-normal mr-1 text-red-400 md:hidden">
+            Pending: <p className="inline text-gray-500"> {totalPending}</p>
+          </strong>
         </td>
-        <td className="px-6 py-4">
-          <strong
-            className="md:hidden text-black font-normal mr-1
-"
-          >
+        <td className="px-6 py-4 max-md:hidden">
+          <strong className="md:hidden text-black font-normal mr-1">
             Pending:
           </strong>
           {totalPending}

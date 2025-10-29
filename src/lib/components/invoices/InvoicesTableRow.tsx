@@ -55,13 +55,21 @@ function InvoicesTableRow({ name, email, amount, status, date, id }: Props) {
             <p className="md:hidden text-xs text-gray-500">
               {formatDate(date)}
             </p>
+            <p
+              className={`md:hidden text-xs text-gray-500 ${
+                status === "Paid" ? "text-green-600" : "text-red-400"
+              } `}
+            >
+              {status}
+            </p>
           </th>
           <td className="px-6 py-4 max-md:hidden">{email}</td>
-          <td className="px-6 py-4 max-md:px-2">{`$${amount}`}</td>
+          <td className="px-6 py-4 max-md:px-0">{`$${amount}`}</td>
           <td className="px-6 py-4 whitespace-nowrap overflow-hidden text-ellipsis max-md:hidden">
             {formatDate(date)}
           </td>
-          <td className="px-6 py-4">{status}</td>
+          <td className="px-6 py-4 max-md:hidden">{status}</td>
+
           <td className="pl-5 py-4">
             <div className="flex flex-row gap-x-3 justify-end pr-3">
               <Link
