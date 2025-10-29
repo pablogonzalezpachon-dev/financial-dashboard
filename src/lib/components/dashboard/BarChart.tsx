@@ -110,9 +110,7 @@ const LegendItem = ({
       className={cx(
         // base
         "group inline-flex flex-nowrap items-center gap-1.5 rounded-sm px-2 py-1 whitespace-nowrap transition",
-        hasOnValueChange
-          ? "cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800"
-          : "cursor-default"
+        hasOnValueChange ? "cursor-pointer hover:bg-gray-100" : "cursor-default"
       )}
       onClick={(e) => {
         e.stopPropagation();
